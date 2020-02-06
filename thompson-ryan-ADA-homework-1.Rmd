@@ -1,0 +1,38 @@
+---
+title: "thompson-ryan-ADA-homework-1"
+author: "KRT"
+date: "2/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Challenge 1
+
+```{r quote}
+library(tidyverse)
+
+quote <- "There is grandeur in this view of life,
+with its several powers, having been originally breathed
+by the Creator into a few forms or into one; and that, whilst
+this planet has gone circling on according to the fixed law
+of gravity, from so simple a beginning endless forms most
+beautiful and most wonderful have been, and are being evolved."
+
+quote2 <- gsub("\n", " ", quote)
+
+split_quote <- str_split(quote2, pattern = fixed(" "))
+split_quote2 <- unlist(split_quote)
+split_quote2
+
+every_fourth <- split_quote2[seq(from = 1, to = 65, by = 4)]
+every_fourth
+
+sort(every_fourth, decreasing = FALSE)
+
+```
+
+## Including Plots
+
