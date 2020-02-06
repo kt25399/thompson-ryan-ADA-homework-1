@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Challenge 1
+# Challenge 1
 
 ```{r quote}
 library(tidyverse)
@@ -34,5 +34,18 @@ sort(every_fourth, decreasing = FALSE)
 
 ```
 
-## Including Plots
+# Challenge 2
 
+```{r matrix}
+
+m <- matrix (data = seq(1, 160, 2), 
+             nrow = 8, 
+             ncol = 10)
+m
+
+(m[5, 2]) 
+(m[5:7,])
+
+m2 <- m[3:6, 4:9]
+class(m2)
+mode(m2)
