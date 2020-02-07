@@ -27,10 +27,10 @@ split_quote <- str_split(quote2, pattern = fixed(" "))
 split_quote2 <- unlist(split_quote)
 split_quote2
 
-every_fourth <- split_quote2[seq(from = 1, to = 65, by = 4)]
+every_fourth <- split_quote2[seq(from = 4, to = 65, by = 4)]
 every_fourth
 
-sort(every_fourth, decreasing = FALSE)
+sort(every_fourth, decreasing = TRUE)
 
 ```
 
