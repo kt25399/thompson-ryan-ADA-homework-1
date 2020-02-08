@@ -601,6 +601,52 @@ a</code></pre>
 ## [3,]  148  143  138  133  128
 ## [4,]  147  142  137  132  127
 ## [5,]  146  141  136  131  126</code></pre>
+<p>#Challenge 4</p>
+<pre class="r"><code>primates &lt;- list (
+  strepsirhini &lt;- list(
+    lorisiformes &lt;- list(
+      lorisoidea &lt;- c(
+        &quot;lorisidae&quot;, &quot;galagidae&quot;
+      )
+    ),
+    lemuriformes &lt;- list(
+      lemuroidea &lt;- c(
+        &quot;lemuroidea&quot;, &quot;cheirogaleidae&quot;, &quot;indriidae&quot;, &quot;lemuridae&quot;, &quot;daubentoniidae&quot;
+      )
+    )
+  ),
+  haplorhini &lt;- list(
+    tarsliformes &lt;- list(
+      tarsioidea &lt;- c(
+        &quot;tarsiidae&quot;
+      )
+    ),
+    simiiformes &lt;- list(
+      platyrrhini &lt;- list(
+        ceboidea &lt;- c(
+          &quot;cebidae&quot;, &quot;atelidae&quot;, &quot;pitheciidae&quot;
+        )
+      ),
+      catarrhini &lt;- list(
+        hominoidea &lt;- c(
+          &quot;hylobatidae&quot;, &quot;hominidae&quot;
+        ),
+        copithecoidea &lt;- c(
+          &quot;cercopithecidae&quot;
+        )
+      )
+    )
+  )
+)
+names(tarsliformes) &lt;- c(&quot;tarsioidea&quot;)
+
+nwm &lt;- primates[[2]][[2]][[1]]
+class(nwm)</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<pre class="r"><code>mode(nwm)</code></pre>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<pre class="r"><code>tarsliformes$tarsioidea</code></pre>
+<pre><code>## [1] &quot;tarsiidae&quot;</code></pre>
 </div>
 
 

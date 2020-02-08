@@ -62,3 +62,51 @@ a[1, 1, 1, 2]
 a[2, 3, 2, ]
 a[1:5, 1:5, 3, 3]
 ```
+
+#Challenge 4
+
+```{r listception}
+primates <- list (
+  strepsirhini <- list(
+    lorisiformes <- list(
+      lorisoidea <- c(
+        "lorisidae", "galagidae"
+      )
+    ),
+    lemuriformes <- list(
+      lemuroidea <- c(
+        "lemuroidea", "cheirogaleidae", "indriidae", "lemuridae", "daubentoniidae"
+      )
+    )
+  ),
+  haplorhini <- list(
+    tarsliformes <- list(
+      tarsioidea <- c(
+        "tarsiidae"
+      )
+    ),
+    simiiformes <- list(
+      platyrrhini <- list(
+        ceboidea <- c(
+          "cebidae", "atelidae", "pitheciidae"
+        )
+      ),
+      catarrhini <- list(
+        hominoidea <- c(
+          "hylobatidae", "hominidae"
+        ),
+        copithecoidea <- c(
+          "cercopithecidae"
+        )
+      )
+    )
+  )
+)
+names(tarsliformes) <- c("tarsioidea")
+
+nwm <- primates[[2]][[2]][[1]]
+class(nwm)
+mode(nwm)
+
+tarsliformes$tarsioidea
+```
