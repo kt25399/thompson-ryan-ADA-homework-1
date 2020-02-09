@@ -32,7 +32,7 @@ every_fourth <- split_quote2[seq(from = 4, to = 65, by = 4)]
 every_fourth
 
 sort(every_fourth, decreasing = TRUE)
-
+```
 
 # Challenge 2
 
