@@ -387,35 +387,34 @@ this planet has gone circling on according to the fixed law
 of gravity, from so simple a beginning endless forms most
 beautiful and most wonderful have been, and are being evolved.&quot;
 
-quote2 &lt;- gsub(&quot;\n&quot;, &quot; &quot;, quote)
+quote2 &lt;- gsub(&quot;[[:punct:]]&quot;, &quot;&quot;, quote)
+quote2 &lt;- gsub(&quot;\n&quot;, &quot; &quot;, quote2)
 
 split_quote &lt;- str_split(quote2, pattern = fixed(&quot; &quot;))
 split_quote2 &lt;- unlist(split_quote)
 split_quote2</code></pre>
 <pre><code>##  [1] &quot;There&quot;      &quot;is&quot;         &quot;grandeur&quot;   &quot;in&quot;         &quot;this&quot;      
-##  [6] &quot;view&quot;       &quot;of&quot;         &quot;life,&quot;      &quot;with&quot;       &quot;its&quot;       
-## [11] &quot;several&quot;    &quot;powers,&quot;    &quot;having&quot;     &quot;been&quot;       &quot;originally&quot;
+##  [6] &quot;view&quot;       &quot;of&quot;         &quot;life&quot;       &quot;with&quot;       &quot;its&quot;       
+## [11] &quot;several&quot;    &quot;powers&quot;     &quot;having&quot;     &quot;been&quot;       &quot;originally&quot;
 ## [16] &quot;breathed&quot;   &quot;by&quot;         &quot;the&quot;        &quot;Creator&quot;    &quot;into&quot;      
 ## [21] &quot;a&quot;          &quot;few&quot;        &quot;forms&quot;      &quot;or&quot;         &quot;into&quot;      
-## [26] &quot;one;&quot;       &quot;and&quot;        &quot;that,&quot;      &quot;whilst&quot;     &quot;this&quot;      
+## [26] &quot;one&quot;        &quot;and&quot;        &quot;that&quot;       &quot;whilst&quot;     &quot;this&quot;      
 ## [31] &quot;planet&quot;     &quot;has&quot;        &quot;gone&quot;       &quot;circling&quot;   &quot;on&quot;        
 ## [36] &quot;according&quot;  &quot;to&quot;         &quot;the&quot;        &quot;fixed&quot;      &quot;law&quot;       
-## [41] &quot;of&quot;         &quot;gravity,&quot;   &quot;from&quot;       &quot;so&quot;         &quot;simple&quot;    
+## [41] &quot;of&quot;         &quot;gravity&quot;    &quot;from&quot;       &quot;so&quot;         &quot;simple&quot;    
 ## [46] &quot;a&quot;          &quot;beginning&quot;  &quot;endless&quot;    &quot;forms&quot;      &quot;most&quot;      
 ## [51] &quot;beautiful&quot;  &quot;and&quot;        &quot;most&quot;       &quot;wonderful&quot;  &quot;have&quot;      
-## [56] &quot;been,&quot;      &quot;and&quot;        &quot;are&quot;        &quot;being&quot;      &quot;evolved.&quot;</code></pre>
+## [56] &quot;been&quot;       &quot;and&quot;        &quot;are&quot;        &quot;being&quot;      &quot;evolved&quot;</code></pre>
 <pre class="r"><code>every_fourth &lt;- split_quote2[seq(from = 4, to = 65, by = 4)]
 every_fourth</code></pre>
-<pre><code>##  [1] &quot;in&quot;        &quot;life,&quot;     &quot;powers,&quot;   &quot;breathed&quot;  &quot;into&quot;      &quot;or&quot;       
-##  [7] &quot;that,&quot;     &quot;has&quot;       &quot;according&quot; &quot;law&quot;       &quot;so&quot;        &quot;endless&quot;  
-## [13] &quot;and&quot;       &quot;been,&quot;     &quot;evolved.&quot;  NA</code></pre>
+<pre><code>##  [1] &quot;in&quot;        &quot;life&quot;      &quot;powers&quot;    &quot;breathed&quot;  &quot;into&quot;      &quot;or&quot;       
+##  [7] &quot;that&quot;      &quot;has&quot;       &quot;according&quot; &quot;law&quot;       &quot;so&quot;        &quot;endless&quot;  
+## [13] &quot;and&quot;       &quot;been&quot;      &quot;evolved&quot;   NA</code></pre>
 <pre class="r"><code>sort(every_fourth, decreasing = TRUE)</code></pre>
-<pre><code>##  [1] &quot;that,&quot;     &quot;so&quot;        &quot;powers,&quot;   &quot;or&quot;        &quot;life,&quot;     &quot;law&quot;      
-##  [7] &quot;into&quot;      &quot;in&quot;        &quot;has&quot;       &quot;evolved.&quot;  &quot;endless&quot;   &quot;breathed&quot; 
-## [13] &quot;been,&quot;     &quot;and&quot;       &quot;according&quot;</code></pre>
-</div>
-<div id="challenge-2" class="section level1">
-<h1>Challenge 2</h1>
+<pre><code>##  [1] &quot;that&quot;      &quot;so&quot;        &quot;powers&quot;    &quot;or&quot;        &quot;life&quot;      &quot;law&quot;      
+##  [7] &quot;into&quot;      &quot;in&quot;        &quot;has&quot;       &quot;evolved&quot;   &quot;endless&quot;   &quot;breathed&quot; 
+## [13] &quot;been&quot;      &quot;and&quot;       &quot;according&quot;</code></pre>
+<pre class="r"><code># Challenge 2</code></pre>
 <pre class="r"><code>m1 &lt;- matrix (data = seq(1, 160, 2), 
              nrow = 8, 
              ncol = 10)

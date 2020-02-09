@@ -21,7 +21,8 @@ this planet has gone circling on according to the fixed law
 of gravity, from so simple a beginning endless forms most
 beautiful and most wonderful have been, and are being evolved."
 
-quote2 <- gsub("\n", " ", quote)
+quote2 <- gsub("[[:punct:]]", "", quote)
+quote2 <- gsub("\n", " ", quote2)
 
 split_quote <- str_split(quote2, pattern = fixed(" "))
 split_quote2 <- unlist(split_quote)
@@ -32,7 +33,6 @@ every_fourth
 
 sort(every_fourth, decreasing = TRUE)
 
-```
 
 # Challenge 2
 
